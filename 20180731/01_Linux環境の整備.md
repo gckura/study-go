@@ -10,7 +10,7 @@ AWS WorkSpaces で Amazon Linux 2 を起動した後の設定を行います。
 
 ## 設定変更用エディタ
 
-シンプルエディタ pluma をメニューに登録
+シンプルエディタ pluma をメニューに登録します。
 
 Applications -> Accessories -> Pluma Text Editor
 右クリックして、　Add this launcher to panel
@@ -75,7 +75,7 @@ Keyboard modelを以下に設定します。
 
 ## 日本語化
 
-AWS WorkSpaces Linux 2 を日本語で起動し、MacBookから接続している場合は、
+AWS WorkSpaces Linux 2 を日本語で起動し、Windowsから接続している場合は、
 設定不要です。
 
 AWS WorkSpaces Linux 2 を日本語で起動し、MacBookから接続している場合は、
