@@ -18,7 +18,7 @@ type Gem struct {
 	Price         int       `xorm:"price"`
 	ProducingArea string    `xorm:"producing_area"`
 	Carat         float32   `xorm:"carat"`
-	Wieght        float32   `xorm:"weight"`
+	Weight        float32   `xorm:"weight"`
 	Color         string    `xorm:"color"`
 	Memo          string    `xorm:"memo"`
 	Scratched     bool      `xorm:"scratched"`
@@ -40,7 +40,7 @@ func main() {
 		Price:         1200,
 		ProducingArea: "",
 		Carat:         1.2,
-		Wieght:        12,
+		Weight:        12,
 		Color:         "red",
 		Memo:          "Hei",
 		Scratched:     &scrathed,
