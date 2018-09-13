@@ -50,7 +50,7 @@ func main() {
 		fmt.Println(err)
 	}
 
-	// fuck, err := engine.Insert(&gem)
+	_, err := engine.Insert(&gem)
 
 	fmt.Println(engine.Insert(&gem))
 }
