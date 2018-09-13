@@ -1,12 +1,6 @@
-package main
+package models
 
-import (
-	"time"
-
-	"github.com/gemcook/study-go/20180914/misc"
-	"github.com/gemcook/study-go/20180914/models"
-	_ "github.com/go-sql-driver/mysql"
-)
+import "time"
 
 // Gem is model struct
 type Gem struct {
@@ -28,32 +22,4 @@ type Gem struct {
 // TableName is function
 func (Gem) TableName() string {
 	return "t_gems"
-}
-
-func main() {
-	gem := models.Gem{
-		Name:          "Ruby",
-		JapaneseName:  "ルビー",
-		EnglishName:   "ruby",
-		Hardness:      10,
-		Price:         1200,
-		ProducingArea: "",
-		Carat:         1.2,
-		Wieght:        12,
-		Color:         "red",
-		Memo:          "Hei",
-		Scratched:     false,
-	}
-
-	engine, err := misc.NewEngine()
-	if err != nil {
-		misc.ErrorMessage()
-	}
-
-	_, err = engine.Insert(&gem)
-	if err != nil {
-		misc.ErrorMessage()
-	}
-
-	misc.ErrorMessage()
 }
