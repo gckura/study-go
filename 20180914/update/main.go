@@ -7,9 +7,11 @@ import (
 )
 
 func main() {
+	scratched := true
 	gem := models.Gem{
+		ID:        37,
 		Name:      "ほえー",
-		Scratched: true,
+		Scratched: &scratched,
 	}
 
 	engine, err := misc.NewEngine()
@@ -18,7 +20,7 @@ func main() {
 		panic(err)
 	}
 
-	_, err = engine.ID(34).Update(&gem)
+	_, err = engine.ID(gem.ID).Update(&gem)
 	if err != nil {
 		misc.ErrorMessage()
 		panic(err)

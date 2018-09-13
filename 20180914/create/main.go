@@ -31,6 +31,7 @@ func (Gem) TableName() string {
 }
 
 func main() {
+	scrathed := false
 	gem := models.Gem{
 		Name:          "Ruby",
 		JapaneseName:  "ルビー",
@@ -42,7 +43,7 @@ func main() {
 		Wieght:        12,
 		Color:         "red",
 		Memo:          "Hei",
-		Scratched:     false,
+		Scratched:     &scrathed,
 	}
 
 	engine, err := misc.NewEngine()
