@@ -48,12 +48,14 @@ func main() {
 	engine, err := misc.NewEngine()
 	if err != nil {
 		misc.ErrorMessage()
+		panic(err)
 	}
 
 	_, err = engine.Insert(&gem)
 	if err != nil {
 		misc.ErrorMessage()
+		panic(err)
 	}
 
-	misc.ErrorMessage()
+	misc.SuccessMessage()
 }

@@ -1,15 +1,16 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/gemcook/study-go/20180914/misc"
 	"github.com/gemcook/study-go/20180914/models"
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-	var gems []models.Gem
+	gem := models.Gem{
+		Name:      "ほえー",
+		Scratched: true,
+	}
 
 	engine, err := misc.NewEngine()
 	if err != nil {
@@ -17,12 +18,11 @@ func main() {
 		panic(err)
 	}
 
-	err = engine.Find(&gems)
+	_, err = engine.ID(34).Update(&gem)
 	if err != nil {
 		misc.ErrorMessage()
 		panic(err)
 	}
 
-	fmt.Println(gems)
 	misc.SuccessMessage()
 }

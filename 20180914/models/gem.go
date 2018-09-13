@@ -15,7 +15,7 @@ type Gem struct {
 	Wieght        float32   `xorm:"weight"`
 	Color         string    `xorm:"color"`
 	Memo          string    `xorm:"memo"`
-	Scratched     bool      `xorm:"scratched"`
+	Scratched     *bool     `xorm:"scratched"`
 	MiningDate    time.Time `xorm:"mining_date updated"`
 }
 

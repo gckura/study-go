@@ -16,11 +16,13 @@ func main() {
 	engine, err := misc.NewEngine()
 	if err != nil {
 		misc.ErrorMessage()
+		panic(err)
 	}
 
-	_, err = engine.Get(&gem)
+	_, err = engine.ID(gem.ID).Get(&gem)
 	if err != nil {
 		misc.ErrorMessage()
+		panic(err)
 	}
 
 	fmt.Println(gem)
