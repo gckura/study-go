@@ -6,11 +6,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-// TableName is function
-func (Gem) TableName() string {
-	return "t_gems"
-}
-
 func main() {
 	scratched := false
 	gem := models.Gem{
