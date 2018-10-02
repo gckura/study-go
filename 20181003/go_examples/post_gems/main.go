@@ -11,7 +11,7 @@ func main() {
 
 	var body string = `
 		{
-			 "name":"ペリドット",
+			"name":"ペリドット",
 			"japanese_name":"かんらん石",
 			"english_name":"peridot",
 			"hardness":9.6,
