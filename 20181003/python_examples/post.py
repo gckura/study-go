@@ -1,7 +1,7 @@
 # -- coding: utf-8 -- 
 import requests
 
-payload = {
+data = {
     "name":"ペリドット",
     "japanese_name":"かんらん石",
     "english_name":"peridot",
@@ -16,6 +16,9 @@ payload = {
     "mining_date":"2017-08-23T00:00:00Z"
     }
 
-response = requests.post('https://api.tech.gemcook.org/v1/gems', json=payload)
+# requests.postでPOSTする
+# json=dataと記述することで、jsonデータをポストできるようになる
+response = requests.post('https://api.tech.gemcook.org/v1/gems', json=data)
+
 print(response.status_code)
 print(response.text)
