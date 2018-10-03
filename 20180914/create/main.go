@@ -9,16 +9,16 @@ import (
 func main() {
 	scratched := false
 	gem := models.Gem{
-		Name:          "Ruby",
-		JapaneseName:  "ルビー",
-		EnglishName:   "ruby",
-		Hardness:      10,
-		Price:         1200,
+		Name:          "サファイア",
+		JapaneseName:  "サファイア",
+		EnglishName:   "saphire",
+		Hardness:      9,
+		Price:         999,
 		ProducingArea: "",
-		Carat:         1.2,
-		Weight:        12,
-		Color:         "red",
-		Memo:          "Hei",
+		Carat:         2.2,
+		Weight:        22,
+		Color:         "blue",
+		Memo:          "Hello",
 		Scratched:     &scratched,
 	}
 
