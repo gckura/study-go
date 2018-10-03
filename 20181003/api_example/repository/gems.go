@@ -38,8 +38,8 @@ func (g *Gems) GetAll() ([]*model.Gem, error) {
 
 func (g *Gems) Delete(id uint64) error {
 	var gem model.Gem
-	gem.IsDeleted = true
-	_, err := g.engine.Where("id = ?", id).Update(&gem)
+
+	_, err := g.engine.Where("id = ?", id).Delete(&gem)
 	if err != nil {
 		return err
 	}
